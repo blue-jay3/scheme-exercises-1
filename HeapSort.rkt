@@ -1,6 +1,6 @@
 #lang racket
 
-; from lab 5
+; Receives a vector and sorts the vector using heap sort.
 
 (define (swap heap j k) ; swaps element x with element y in the heap
   (display j)
@@ -48,14 +48,6 @@
   (downheap (remove-root heap) 0)
 )
 
-; Question 4
-
-; In class, you learned about two sorting methods, which are merge sort and quick sort. In this
-; problem, you should implement two other sorting methods.
-; a) Using the heap data structure that you implemented in the lab, write a function that receives a
-; vector and sorts the vector using heap sort.
-; b) Write a function that receives a vector and implements the insertion sort.
-
 ; N - N/2 = num leaves, then everything less then heap length - num leaves has two children
 
 (define (to-max-heap arr i)
@@ -86,4 +78,3 @@
 )
 
 (heap-sort '#(10 18 3 22 9 31 45 28)) ; '#(3 9 10 18 22 28 31 45)
-;(insertion-sort '#(10 18 3 22 9 31 45 28)) ; '#(3 9 10 18 22 28 31 45)

@@ -1,11 +1,6 @@
 #lang racket
 
-; Question 2
-
-; Write a function that takes a string and a list of strings and finds all the strings in the given list,
-; which are hidden in the given string. A string is hidden in another string if its letters appear in that
-; string in the same order. For example, “cat” is hidden in the string “carter” but “cat” is not hidden
-; in “trace”.
+; Finds all the words in the given list which are contained in the string.
 
 (define (hidden-helper? str word)
   (cond
